@@ -5,7 +5,6 @@ RUN go build -o /server
 
 # app
 FROM diamol/base
-
 ENV IMAGE_API_URL="http://iotd/image" \
     ACCESS_API_URL="http://accesslog/access-log"
 
