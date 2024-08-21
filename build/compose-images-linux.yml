@@ -1,0 +1,48 @@
+services:
+  base:
+    build:
+      context: ../images/base/linux
+      args:
+        ALPINE_VERSION: ${ALPINE_VERSION}
+
+  node:
+    build:
+      context: ../images/node/linux
+      args:
+        ALPINE_VERSION: ${ALPINE_VERSION}
+
+  apache:
+    build:
+      context: ../images/apache/linux
+      args:
+        ALPINE_VERSION: ${ALPINE_VERSION}
+
+  maven:
+    build:
+      context: ../images/maven/linux
+
+  openjdk:
+    build:
+      context: ../images/openjdk/linux
+
+  golang:
+    build:
+      context: ../images/golang/linux
+
+  dotnet-sdk:
+    build:
+      context: ../images/dotnet/sdk/linux
+      args:
+        DOTNET_VERSION: "8.0"
+
+  dotnet-runtime:
+    build:
+      context: ../images/dotnet/runtime/linux
+      args:
+        DOTNET_VERSION: "8.0"
+
+  dotnet-aspnet:
+    build:
+      context: ../images/dotnet/aspnet/linux
+      args:
+        DOTNET_VERSION: "8.0"
